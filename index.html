@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>تقرير إنجازات قسم الذكاء الاصطناعي</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            padding: 40px;
+            color: #2d3748;
+            background-color: #f7fafc;
+            line-height: 1.8;
+        }
+        
+        /* قسم الشعارات */
+        .logos-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .logo-box {
+            text-align: center;
+            flex: 1;
+        }
+
+        .logo-box img {
+            max-height: 90px;
+            max-width: 110px;
+            object-fit: contain;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.05));
+        }
+
+        /* الرأس الرئيسي للموقع */
+        .header {
+            text-align: center;
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+            color: #fff;
+            padding: 40px 20px;
+            border-radius: 16px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 15px -3px rgba(30, 58, 138, 0.2);
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .header h2 {
+            color: #93c5fd;
+            margin: 15px 0 0 0;
+            font-size: 18px;
+            font-weight: 400;
+        }
+        
+        /* عناوين الأقسام الرئيسية */
+        .section-title {
+            background: linear-gradient(90deg, #1e3a8a 0%, #3b82f6 100%);
+            color: #fff;
+            padding: 14px 24px;
+            border-radius: 12px;
+            font-size: 22px;
+            font-weight: 600;
+            margin-top: 40px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.1);
+        }
+        
+        /* بطاقات الإنجازات */
+        .item-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            border-right: 5px solid #3b82f6;
+            transition: transform 0.2s;
+            page-break-inside: avoid;
+        }
+        
+        .item-title {
+            color: #1e3a8a;
+            font-size: 20px;
+            font-weight: 700;
+            margin: 0 0 15px 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        .meta-info {
+            font-weight: 700;
+            color: #2563eb;
+            background: #eff6ff;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+        
+        .participants-list {
+            margin: 10px 0 0 0;
+            padding-right: 20px;
+            list-style-type: square;
+            color: #4a5568;
+        }
+
+        .participants-list li {
+            margin-bottom: 6px;
+        }
+        
+        /* شبكة المشروعات */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .project-item {
+            background: linear-gradient(145deg, #ffffff, #f1f5f9);
+            padding: 14px 18px;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 600;
+            color: #1e293b;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            display: flex;
+            align-items: center;
+        }
+
+        .project-item::before {
+            content: "🤖";
+            margin-left: 10px;
+            font-size: 16px;
+        }
+
+        /* تخصيص مظهر قائمة الندوات */
+        .nested-card-list {
+            background: #f8fafc;
+            border-radius: 8px;
+            padding: 15px 20px;
+            margin-top: 15px;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .nested-card-list li {
+            margin-bottom: 12px;
+            line-height: 1.7;
+        }
+
+        @media print {
+            body { padding: 0; background-color: #fff; }
+            .logos-container { box-shadow: none; border: 1px solid #e2e8f0; }
+            .header { background: #1e3a8a !important; -webkit-print-color-adjust: exact; }
+            .header h2 { color: #fff !important; }
+            .section-title { background: #1e3a8a !important; -webkit-print-color-adjust: exact; }
+            .item-card { box-shadow: none; border: 1px solid #e2e8f0; border-right: 5px solid #3b82f6 !important; }
+            .project-item { background: #fff !important; -webkit-print-color-adjust: exact; }
+            .meta-info { background: #e2e8f0 !important; color: #1e3a8a !important; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- قسم اللوجوهات المحدث بأسماء وصيغ الـ PNG الجديدة -->
+    <div class="logos-container">
+        <div class="logo-box">
+            <img src="1.png" alt="لوجو الجامعة">
+        </div>
+        <div class="logo-box">
+            <img src="2.png" alt="لوجو الكلية">
+        </div>
+        <div class="logo-box">
+            <img src="3.png" alt="لوجو قسم الذكاء الاصطناعي">
+        </div>
+    </div>
+
+    <!-- رأس الصفحة المطور -->
+    <div class="header">
+        <h1>تقرير إنجازات قسم الذكاء الاصطناعي</h1>
+        <h2>الكلية التكنولوجية بالقاهرة – جامعة حلوان التكنولوجية الدولية</h2>
+    </div>
+
+    <!-- القسم الأول -->
+    <div class="section-title">⚡ أولًا: الإنجازات والظهور الإعلامي والفعاليات الأكاديمية</div>
+
+    <div class="item-card">
+        <div class="item-title">١. مناقشة مشاريع مادة الـ IoT</div>
+        <p><span class="meta-info">الحدث</span> شهدت الكلية مناقشة مشاريع مادة الـ IoT لطلاب الفرقة الثانية بقسم الذكاء الاصطناعي، وسط أجواء مليئة بالإبداع والابتكار والحلول الذكية التي جمعت بين تقنيات إنترنت الأشياء والذكاء الاصطناعي لمواكبة التطورات العالمية المتقدمة.</p>
+        <p style="margin-bottom: 5px; font-weight: 600; color: #1e3a8a;">الرعاية والإشراف الأكاديمي:</p>
+        <ul class="participants-list">
+            <li>تحت رعاية وإشراف رئيس قسم الذكاء الاصطناعي: <strong>الدكتور/ سيمون عزت</strong>.</li>
+            <li>تحت إشراف وتوجيه متميز من: <strong>المهندس/ محمد عمار</strong>.</li>
+        </ul>
+        <p style="margin-top: 15px;"><span class="meta-info">التوثيق المرئي</span> تم إعداد وتصميم الفيديو الخاص بالحدث بواسطة الطالب المبدع/ <strong>عاصم حاتم عوض</strong>.</p>
+    </div>
+
+    <div class="item-card">
+        <div class="item-title">٢. لقاء إذاعي في برنامج "Reality Speaks" من مبنى ماسبيرو (مايو ٢٠٢٦)</div>
+        <p><span class="meta-info">التاريخ</span> السبت ١٥ مايو ٢٠٢٦.</p>
+        <p><span class="meta-info">الحدث</span> مشاركة إعلامية متميزة لتمثيل الجامعة من داخل مبنى ماسبيرو في برنامج "Reality Speaks" المذاع عبر راديو مصر (Radio Misr)، في لقاء مباشر تناول دور الشباب في الابتكار والتكنولوجيا وأهمية المشروعات الطلابية في دعم التحول الرقمي.</p>
+        <p style="margin-bottom: 5px; font-weight: 600; color: #1e3a8a;">مقدمو البرنامج والحضور:</p>
+        <ul class="participants-list">
+            <li><strong>مقدمو البرنامج:</strong> الإعلامي/ أحمد فهمي، والإعلامية/ هنا فوزي.</li>
+            <li><strong>م. محمد عمار</strong> – معيد بكلية التكنولوجيا بجامعة حلوان.</li>
+            <li><strong>الطالب/ أحمد أيمن</strong> – طالب بالفرقة الثانية، قسم الذكاء الاصطناعي.</li>
+            <li><strong>الطالب/ يوسف أسامة</strong> – طالب بالفرقة الثانية، قسم الذكاء الاصطناعي.</li>
+        </ul>
+    </div>
+
+    <div class="item-card">
+        <div class="item-title">٣. لقاء تلفزيوني في برنامج "شباب على الهوا" (مايو ٢٠٢٦)</div>
+        <p><span class="meta-info">التاريخ</span> الأربعاء ٢٠ مايو ٢٠٢٦.</p>
+        <p><span class="meta-info">الحدث</span> استضافة وفد متميز من الكلية في برنامج "شباب على الهوا" المذاع على القناة الثانية المصرية، من تقديم الإعلامية سلمى وهبة، للحديث عن الابتكارات التكنولوجية والمشروعات التطبيقية ودور التعليم التكنولوجي.</p>
+        <p style="margin-bottom: 5px; font-weight: 600; color: #1e3a8a;">المشاركون في اللقاء:</p>
+        <ul class="participants-list">
+            <li><strong>م. محمد عمار</strong> – معيد بكلية التكنولوجيا بجامعة حلوان.</li>
+            <li><strong>الطالب/ عاصم محمد</strong>.</li>
+            <li><strong>الطالب/ عبد الرحمن ياسر</strong>.</li>
+        </ul>
+    </div>
+
+    <div class="item-card">
+        <div class="item-title">٤. ابتكار روبوت ذكي بدعم أكاديمية البحث العلمي</div>
+        <p><span class="meta-info">الحدث</span> نجح فريق <strong>Ezmeralda Robot</strong> في ابتكار روبوت ذكي متطور يعمل بالكامل بتقنيات الذكاء الاصطناعي، وحصل المشروع على تمويل رسمي من أكاديمية البحث العلمي والتكنولوجيا لدعمه وتطويره وتحويله لتطبيق عملي لخدمة المجتمع.</p>
+    </div>
+
+    <div class="item-card">
+        <div class="item-title">٥. مشاركة فريق "عصابة التكنولوجيين" في برنامج "بالـ AI"</div>
+        <p><span class="meta-info">الحدث</span> استضاف برنامج "بالـ AI" على قناة الشمس الفضائية فريق <strong>Technologists Gang (عصابة التكنولوجيين)</strong>، حيث استعرض الفريق مشروعه الإعلامي الهادف لنشر الوعي بالمصطلحات التكنولوجية الحديثة.</p>
+        <p style="margin-bottom: 5px; font-weight: 600; color: #1e3a8a;">أعضاء الفريق:</p>
+        <ul class="participants-list">
+            <li><strong>محمد زين:</strong> مؤسس الفريق وقائده.</li>
+            <li><strong>محمد عمرو:</strong> مسؤول كتابة المحتوى.</li>
+            <li><strong>عمر أحمد:</strong> مسؤول التعليق الصوتي.</li>
+        </ul>
+    </div>
+
+    <!-- القسم الثاني -->
+    <div class="section-title">🏛️ ثانيًا: الفعاليات والمعارض والندوات التوعوية</div>
+
+    <div class="item-card">
+        <div class="item-title">١. حفل المواهب والملتقيات الوطنية (٢٠٢٥)</div>
+        <ul class="participants-list">
+            <li><strong>حفل المواهب الأول (أبريل ٢٠٢٥):</strong> شهدت الجامعة تنظيم أول حفل للمواهب الطلابية، متضمنًا فقرات إبداعية مميزة في مجالات التلاوة، الشِعر، العزف، والفنون التشكيلية.</li>
+            <li><strong>الملتقى الحواري الوطني "صحح مفاهيمك" (نوفمبر ٢٠٢٥):</strong> مشاركة طلاب الجامعة في الملتقى بحضور عدد من الوزراء والشخصيات العامة لتعزيز الوعي الوطني لدى الشباب.</li>
+        </ul>
+    </div>
+
+    <div class="item-card">
+        <div class="item-title">٢. معرض EduTech Egypt Summit 2026 (أبريل ٢٠٢٦)</div>
+        <p><span class="meta-info">الحدث</span> شاركت الجامعة في فعاليات الملتقى، حيث قدم طلاب برنامج الذكاء الاصطناعي عروضًا لمشروعاتهم التطبيقية، وساهموا في التعريف ببرامج الجامعة وفرص التدريب والتوظيف المتاحة.</p>
+    </div>
+
+    <div class="item-card">
+        <div class="item-title">٣. المعرض الأول لمشروعات التخرج (قسم الذكاء الاصطناعي)</div>
+        <p>تحت رعاية قيادات الجامعة والكلية، قدم طلاب قسم الذكاء الاصطناعي مجموعة متميزة من أحدث المشروعات التطبيقية التي تلبي احتياجات سوق العمل الفعلي:</p>
+        
+        <div class="projects-grid">
+            <div class="project-item">١. Smart Guard & Fire Fighter Robot</div>
+            <div class="project-item">٢. Chess Robotic Arm</div>
+            <div class="project-item">٣. ANUBIS Application</div>
+            <div class="project-item">٤. Smart AI Hospital</div>
+            <div class="project-item">٥. Face Recognition Attendance System</div>
+            <div class="project-item">٦. Vidscribe</div>
+            <div class="project-item">٧. My University</div>
+            <div class="project-item">٨. Bot Mimic</div>
+            <div class="project-item">٩. UniSign</div>
+            <div class="project-item">١٠. WeatherNow</div>
+            <div class="project-item">١١. Smart Car Parking</div>
+            <div class="project-item">١٢. Smart City</div>
+            <div class="project-item">١٣. Smart Sight</div>
+        </div>
+    </div>
+
+    <div class="item-card">
+        <div class="item-title">٤. الندوات التوعوية والأنشطة العامة للقسم</div>
+        <ul class="nested-card-list">
+            <li><strong>ندوة "التزييف العميق والتضليل الإعلامي":</strong> ركزت على رفع وعي الطلاب بمخاطر الأخبار المضللة وآليات التحقق الرقمي واكتشاف الزيف المصنع عبر تقنيات الـ AI.</li>
+            <li><strong>ملتقى قادة الوعي:</strong> مشاركة وفد اتحاد طلاب الجامعة في الملتقى بمعهد إعداد القادة لبناء مهارات القيادة والمعرفة.</li>
+            <li><strong>معرض الجامعات الأجنبية:</strong> المساهمة في تنظيم المعرض بمصر بما يدعم تبادل الخبرات والتكامل مع التعليم التكنولوجي الحديث.</li>
+            <li><strong>دوري الجامعات والمعاهد المصرية:</strong> مشاركة الطلاب الرياضيين المتميزين في حفل الافتتاح لتنمية الأنشطة الثقافية والبدنية.</li>
+        </ul>
+    </div>
+
+    <!-- القسم الثالث -->
+    <div class="section-title">🏆 ثالثًا: المسابقات التكنولوجية والابتكارات الدولية</div>
+
+    <div class="item-card">
+        <div class="item-title">١. هاكاثون الاتحاد الأوروبي للابتكار في مجال المياه</div>
+        <p><span class="meta-info">الحدث</span> شارك طلاب الجامعة بمشروع <strong>Green Vision</strong> لتوظيف الذكاء الاصطناعي في استدامة الموارد المائية وحماية البيئة ضمن أسبوع القاهرة للمياه ٢٠٢٥.</p>
+        <p style="margin-bottom: 5px; font-weight: 600; color: #1e3a8a;">أعضاء الفريق البارزون:</p>
+        <p style="font-size: 15px; color: #4a5568; margin: 0;">زياد السيد، مصطفى إبراهيم صفوت، أحمد محمد رمضان، محمد أحمد فكري، أحمد زكي جبر، أحمد محمود.</p>
+    </div>
+
+    <div class="item-card">
+        <div class="item-title">٢. إنجاز تاريخي في تحدي التكنولوجيا الإفريقي (ATC 2025) بنيروبي</div>
+        <p><span class="meta-info">الحدث</span> تحقيق الكلية لإنجاز متميز في العاصمة الكينية نيروبي بمشاركة واسعة من مختلف دول القارة الإفريقية.</p>
+        <p style="margin-bottom: 5px; font-weight: 600; color: #1e3a8a;">أبرز النتائج المحققة:</p>
+        <ul class="participants-list">
+            <li>حصول فريق الكلية على **المركز السادس** على مستوى الجامعات المشاركة في تطوير تطبيقات الموبايل.</li>
+            <li>حصول الطالبة **بسمة حسين محمد** على **المركز الخامس** على مستوى قارة إفريقيا بأكملها.</li>
+            <li><strong>أعضاء الفريق المعني:</strong> محمود أحمد خلف، محمود أحمد سيد، بسمة حسين (تحت إشراف: م. محمد عمار).</li>
+        </ul>
+    </div>
+
+    <div class="item-card">
+        <div class="item-title">٣. عرض مقترح المنظومة الصحية الذكية أمام وزير الصحة والسكان</div>
+        <p><span class="meta-info">الحدث</span> تقديم طلاب قسم الذكاء الاصطناعي لمقترح مشروع منظومة صحية ذكية تعتمد بالكامل على تقنيات الذكاء الاصطناعي لدعم التحول الرقمي الصحي، وتمت المناقشة في اجتماع موسع بحضور معالي وزير الصحة والسكان.</p>
+        <p style="margin-top: 10px; font-size: 15px; color: #4a5568;"><strong>أعضاء الفريق الـمُبتكِر:</strong> محمود خلف، نديم محمد بدر، مصطفى عبدالناصر.</p>
+    </div>
+
+</body>
+</html>
